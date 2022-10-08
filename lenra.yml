@@ -1,0 +1,15 @@
+componentsApi: "1.0"
+generator:
+  dofigen:
+    image: ruby:3.1.2
+    user: "0"
+    adds:
+      - "."
+    script:
+      - bundle install
+    cmd:
+      - rails s -b0.0.0.0 -p3000
+    ports:
+    - 3000
+dev:
+  devtoolTag: local
