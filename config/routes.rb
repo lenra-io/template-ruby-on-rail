@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get '/health_check', to: 'health_check#show'
-  post '/health_check', to: 'health_check#show'
+  match "*route_not_found.:format", :to => "application#not_found", via: %i[get post patch put]
+  match "*route_not_found",         :to => "application#not_found", via: %i[get post patch put]
 end
